@@ -1,0 +1,877 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PP Gatwick', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100vw;
+    background: #222222; /* Couleur de fond globale */
+    position: relative;
+    overflow-x: hidden;
+    z-index: ;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Styles pour le header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    background: #181A1B;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Ombre sous le header */
+    z-index: 6;
+}
+a {
+  text-decoration: none; /* Enlève la soulignement par défaut */
+  color: inherit; /* Utilise la couleur par défaut du texte */
+}
+
+a:visited {
+  color: inherit; /* Utilise la couleur par défaut du texte pour les liens visités */
+}
+
+/* Logo dans le header */
+.logo {
+   padding-top: 30px;
+   margin-left: 50px;
+   width: 100px;
+}
+
+.langue_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo_container{
+  display: flex;
+  justify-content: center;
+  z-index: 10000;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Menu de navigation */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-right: 66px;
+   
+    
+}
+.langue_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo_container{
+  display: flex;
+  justify-content: center;
+  z-index: 10000;
+  align-items: center;
+  gap: 50px;
+}
+
+.language-link {
+  margin-right: 5px; /* Ajustez la marge selon vos besoins */
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out; /* Transition de couleur au survol */
+}
+
+/* Styles au survol */
+.language-link:hover {
+  color: #4CAF50; /* Couleur verte au survol */
+}
+
+/* Menu de navigation */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-right: 66px;
+   
+    
+}
+
+
+/* Liens dans le menu de navigation */
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    transition: 0.5s;
+    position: relative; /* Nécessaire pour positionner le pseudo-élément */
+    display: inline-block; /* Assure une meilleure gestion de l'espace */
+}
+
+/* Pseudo-élément pour l'effet de soulignement */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px; /* Épaisseur de la barre */
+    background-color: #5DCB5C; /* Couleur de la barre */
+    bottom: -10px; /* Éloignement du mot */
+    left: 0;
+    border-radius: 200px; /* Bords arrondis */
+    transform: scaleX(0); /* Commence sans largeur */
+    transform-origin: bottom right; /* Animation de droite à gauche */
+    transition: transform 0.5s ease-out;
+}
+
+/* Effet de survol */
+.nav-link:hover::after {
+    transform: scaleX(1); /* Pleine largeur lors du survol */
+    transform-origin: bottom left; /* Animation de gauche à droite */
+}
+
+/* Styles pour chaque section de la page */
+#home {
+    position: absolute;
+    top: 110px; /* Au sommet du conteneur parent */
+    width: 100vw;
+    height: 100%;
+    background-color: #222222;
+    
+}
+
+#about {
+    position: absolute;
+    top: 112vh; /* Juste en dessous de #home */
+    width: 100vw;
+    height: 100%;
+    background-color: #222222;
+}
+
+#boss {
+    position: absolute;
+    top: 200vh; /* Juste en dessous de #about */
+    width: 100vw;
+    height: 100%;
+    background-color: #222222;
+    z-index: 1;
+    
+}
+
+#contact {
+    position: absolute;
+    top: 320vh; /* Juste en dessous de #projects */
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222;
+}
+
+/* Conteneur pour l'animation */
+.animation-container {
+    position: relative;
+    width: 400px;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Éléments individuels dans l'animation */
+.animated-element {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    scale: 0.75;
+}
+
+
+.section-title {
+    position: absolute;
+    width: 100%; /* Assure que le titre prend toute la largeur de la section */
+    text-align: center; /* Centre le texte horizontalement */
+    margin-top: 60px; /* Ajustez selon votre besoin */
+    left: 0; /* Aligné avec le bord gauche de la section */
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    z-index: 2;
+    color: #fff;
+}
+.container-txt{
+  color: #fff;
+}
+.ligne {
+    background-color: #5DCB5C; /* Couleur de la ligne */
+    position: absolute; /* Positionnement absolu */
+    height: 6px; /* Hauteur de la ligne */
+    width: 73px; /* Largeur de la ligne */
+    top: 157px; /* Positionnez juste en dessous du titre */
+    left: 50%; /* Démarrez du centre du titre */
+    transform: translateX(-50%); /* Décaler à gauche pour centrer sous le titre */
+    border-radius: 5px; /* Bords arrondis de la ligne */
+
+}
+/*css pour titre about*/
+.atitle-container{
+  position: relative; /* Nouveau */
+  text-align: center; /* Pour centrer le titre */
+  margin-top: 100px; /* Ajustez selon vos besoins */
+  z-index: 3;
+}
+.title-container {
+    position: relative; /* Nouveau */
+    text-align: center; /* Pour centrer le titre */
+    margin-top: 120px; /* Ajustez selon vos besoins */
+    z-index: 3;
+}
+.vert{
+    color: #5DCB5C;
+}
+.titre{
+    font-size: 60px;
+    text-align: left;
+    margin-left: 80px; 
+    padding-top: 170px;
+    color: #fff;
+}
+.espace{
+    margin-left: 100px
+}
+.espace2{
+  margin-left: 100px
+}
+/*texte de la première page*/
+.txt1{
+  position: inherit;
+   margin-top: 90px;
+   margin-left: 80px; 
+   color: #fff;
+   font-size: 22px;
+   
+}
+/*boutton*/
+.about-btn {
+  display: inline-block;
+  margin-top: 5%; /* Utilisation d'une unité relative pour le décalage par rapport au haut */
+  margin-left: 5%; /* Utilisation d'une unité relative pour le décalage par rapport à la gauche */
+  padding: 15px 20px; /* Ajustement de la taille du bouton */
+  background-color: #5DCB5C;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 18px; /* Ajustement de la taille du texte */
+  font-weight: bold;
+}
+
+.about-btn:hover {
+    background-color: #4db04b; /* Légère variation de couleur au survol */
+}
+
+
+
+
+
+
+
+.skill {
+  background-color: #333; /* Couleur de votre header */
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px; /* Border radius */
+  width: 20%;
+  height: 50px;
+  margin: 1%;
+
+  display: flex; /* Utilisation de Flexbox */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+    background-color: #333; /* Couleur de votre header */
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px; /* Border radius */
+    width: 20%;
+    height: 50px;
+    margin: 1%;
+    font-weight: bold;
+
+    
+}
+.skills-container {
+    display: flex; /* Active Flexbox */
+    flex-wrap: wrap; /* Permet le retour à la ligne */
+    gap: 10px; /* Espace entre les compétences */
+    margin-left: 55%;
+    margin-top: 13vh;
+    width: 700px;
+
+    
+}
+
+.titre-skills{
+    margin-left: 70% ;
+    padding-top: 23vh;
+   
+    
+}
+.titre-about{
+    position: absolute;
+    padding-top: 23vh;
+    padding-left: 15vw;
+}
+.text-about{
+    position: absolute;
+    padding-top: 40vh;
+    padding-left: 3vw;
+    width: 45%;
+    font-weight: bold;
+    transform: translateY(-9vh);
+}
+/*slider*/
+
+
+#boss {
+  position: relative;
+  top: 200vh;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  z-index: 99999999;
+    
+    
+  }
+  /* Styles généraux */
+.language-link {
+  margin-right: 5px; /* Ajustez la marge selon vos besoins */
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out; /* Transition de couleur au survol */
+}
+
+/* Styles au survol */
+.language-link:hover {
+  color: #4CAF50; /* Couleur verte au survol */
+}
+
+  
+  .item {
+    width: 200px;
+    height: 300px;
+   
+    list-style-type: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
+    transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+  
+    &:nth-child(1), &:nth-child(2) {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      
+      transform: none;
+      border-radius: 0;
+      box-shadow: none;
+      opacity: 1;
+    }
+  
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 220px); }
+    &:nth-child(5) { left: calc(50% + 440px); }
+    &:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+  }
+  
+  .content {
+    width: min(30vw,400px);
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    font: 400 0.85rem helvetica,sans-serif;
+    color: white;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    opacity: 0;
+    display: none;
+  
+    & .title {
+      font-family: 'arial-black';
+      text-transform: uppercase;
+    }
+  
+    & .description {
+      line-height: 1.7;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.8rem;
+    }
+  
+    & button-style {
+      width: fit-content;
+      background-color: rgba(0,0,0,0.1);
+      color: #28a745;
+      border: 2px solid white;
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+      cursor: pointer;
+    }
+  }
+  
+  .item:nth-of-type(2) .content {
+    display: block;
+    animation: show 0.75s ease-in-out 0.3s forwards;
+  }
+  
+  @keyframes show {
+    0% {
+      filter: blur(5px);
+      transform: translateY(calc(-50% + 75px));
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  .nav {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    user-select: none;
+    color: #4db04b;
+  
+    & .btn {
+      
+      color: #28a745;
+      border: 0px solid rgba(0,0,0,0.6);
+      margin: 0 0.25rem;
+      border-radius: 30%;
+      cursor: pointer;
+      color: #4db04b;
+
+  
+      &:hover {
+       
+       color: #218838;
+        transition: 0.3s;
+        
+      }
+    }
+  }
+  
+  
+
+/* pour l'animation principale*/
+section .container{
+  position: absolute;
+  
+  width: 18vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap ;
+  margin-top: 72vh;
+  margin-left: 60vw;
+ 
+}
+
+section .container .element{
+  
+  width: 1.8vw;
+  height: 1.8vw;
+  background-color: #fff;
+  scale: 0.75;
+  z-index: 5;
+}
+
+/*formulaire de contact*/
+form {
+  max-width: 700px; /* Agrandissement du formulaire */
+  
+  background-color: #333; /* Couleur de fond gris foncé */
+  padding: 20px;
+  border-radius: 10px; /* Arrondir les coins */
+  color: white; /* Couleur du texte en blanc pour contraster avec le fond gris foncé */
+  margin: 0 auto; /* Centrer le formulaire */
+  font-weight: bold;
+  margin-top: 450px;
+}
+
+input[type="text"], input[type="email"] {
+  width: calc(100% - 20px); /* Largeur totale en tenant compte du padding */
+  height: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px; /* Arrondir les coins des champs de saisie */
+  border: none; /* Supprimer la bordure par défaut */
+  background-color: #555; /* Fond légèrement plus clair pour les champs de saisie */
+  color: white; /* Couleur du texte en blanc */
+}
+ textarea{
+  width: calc(100% - 20px); /* Largeur totale en tenant compte du padding */
+  height: 200px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px; /* Arrondir les coins des champs de saisie */
+  border: none; /* Supprimer la bordure par défaut */
+  background-color: #555; /* Fond légèrement plus clair pour les champs de saisie */
+  color: white; /* Couleur du texte en blanc */
+ }
+
+input[type="submit"] {
+  background-color: #5DCB5C; /* Fond vert pour le bouton */
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  text-transform: uppercase;
+  border-radius: 5px; /* Arrondir les coins du bouton */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #218838; /* Changement de couleur au survol */
+}
+.button-style {
+  background-color: #28a745; /* Couleur de fond vert */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Padding pour la taille du bouton */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en forme de main au survol */
+  transition: background-color 0.3s ease; /* Transition en douceur pour le hover */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Taille de la police */
+}
+
+.button-style:hover {
+  background-color: #218838; /* Couleur de fond plus foncée au survol */
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 100px; /* Ajustez la taille selon vos préférences */
+  color: #4db04b;
+  transform: translateX(28vw);
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.prev::before,
+.next::before {
+  display: none; /* Pour cacher le texte par défaut d'ionicons */
+}
+@media (width < 650px) {
+  .nav-menu{
+    display: none;
+  }
+  .logo{
+    width: 20vw;
+    transform: translateX(-15vw);
+  }
+  .header{
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+  }
+  .titre{
+    font-size: 19px;
+    width: 100vw;
+    margin-left: 4vw;
+    margin-top: -15vh ;
+  }
+  .txt1{
+    font-size:15px ;
+    width:90vw ;
+    margin-left: 10vw;
+  }
+  .espace2{
+    display: none;
+  }
+  
+  .about-btn {
+    margin-left: 10vw; /* Ajustement du décalage pour les petits écrans */
+    font-size: 12px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 23vw; /* Ajustez la taille selon vos préférences */
+  color: #4db04b;
+  transform: translateX(-26vw);
+}
+section .container{
+  position: absolute;
+  
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap ;
+  margin-top: 72vh;
+  margin-left: 36vw;
+ 
+}
+
+section .container .element{
+  
+  width: 3vw;
+  height: 3vw;
+  background-color: #fff;
+  scale: 0.75;
+  z-index: 5;
+}
+.section-title {
+  position: absolute;
+  width: 100%; /* Assure que le titre prend toute la largeur de la section */
+  text-align: center; /* Centre le texte horizontalement */
+  margin-top: 60px; /* Ajustez selon votre besoin */
+  left: 0; /* Aligné avec le bord gauche de la section */
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  z-index: 2;
+  color: #fff;
+}
+.text-about{
+  position: absolute;
+  padding-top: 40vh;
+  padding-left: 3vw;
+  width: 55%;
+  font-weight: lighter;
+  font-size: 10px;
+}
+
+
+.skill {
+  background-color: #333; /* Couleur de votre header */
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Border radius */
+  height: 10px;
+  margin: 0%;
+  display: flex; /* Utilisation de Flexbox */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+  font-weight: bold;
+  overflow: hidden; /* Masquer le contenu qui dépasse */
+  white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+  flex-basis: 50%; /* Diviser l'espace en deux colonnes */
+  
+}
+
+
+.skills-container {
+    display: flex; 
+    flex-wrap: wrap; 
+   
+    margin-left: 66%;
+    margin-top: 6vh;
+    width: 60vw;
+    font-size: 9px;
+
+    
+}
+
+.titre-skills{
+    margin-left: 65% ;
+    padding-top: 23vh;
+    font-size: 15px;
+   
+    
+}
+.titre-about{
+    position: absolute;
+    padding-top: 23vh;
+    padding-left: 1vw;
+    font-size: 15px;
+}
+.ligne {
+  background-color: #5DCB5C; /* Couleur de la ligne */
+  position: absolute; /* Positionnement absolu */
+  height: 6px; /* Hauteur de la ligne */
+  width: 73px; /* Largeur de la ligne */
+  top: 20vh; /* Positionnez juste en dessous du titre */
+  left: 50%; /* Démarrez du centre du titre */
+  transform: translateX(-50%); /* Décaler à gauche pour centrer sous le titre */
+  border-radius: 5px; /* Bords arrondis de la ligne */
+
+}
+
+
+}
+
+
+
+@media (width < 650px) {
+  .content {
+    & .title        { font-size: 0.9rem; }
+    & .description  { font-size: 0.65rem; }
+    & button        { font-size: 0.7rem; }
+  }
+  .item {
+    width: 130px;
+    height: 220px;
+    
+
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 140px); }
+    &:nth-child(5) { left: calc(50% + 280px); }
+    &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+    &:nth-child(1), &:nth-child(2) {
+      
+      top: 0;
+      width: 200%;
+      height: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      opacity: 1;
+    }
+  }
+  .about-btn{
+   transform: translateX(26vw);
+  }
+  .espace{
+    margin-left: 50px
+  }
+  #menuBurger {
+    z-index: 10;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.886);
+    color: white;
+    text-align: center;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    animation: slideIn 0.5s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #menuBurger a {
+    z-index: 10;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5em;
+    display: block;
+    margin-bottom: 6vh;
+    margin-top: 6vh;
+    
+
+    
+  }
+
+  #burgerIcon {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 99999;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+  }
+  
+
+  
+  
+  #boss {
+    position: absolute;
+    top: 200vh; /* Juste en dessous de #about */
+    width: 100vw;
+    height: 100%;
+    background-color: #222222;
+    z-index: 1;
+    
+}
+
+
+/*fin menu burger*/
+  li.item{
+    z-index: 1;
+ 
+  }
+  #contact {
+    position: absolute;
+    top: 290vh; /* Juste en dessous de #projects */
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222;
+}
+form {
+  max-width: 700px; /* Agrandissement du formulaire */
+  
+  background-color: #333; /* Couleur de fond gris foncé */
+  padding: 20px;
+  border-radius: 10px; /* Arrondir les coins */
+  color: white; /* Couleur du texte en blanc pour contraster avec le fond gris foncé */
+  margin: 0 auto; /* Centrer le formulaire */
+  font-weight: bold;
+  margin-top: 40vh;
+}
+#about{
+  margin-top: -17vh;
+}
+
+
+
+
+

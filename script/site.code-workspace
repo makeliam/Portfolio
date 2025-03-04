@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../Downloads/responsive-image-carousel-animation/dist"
+		},
+		{
+			"path": "../../../Downloads/responsive-image-carousel-animation 2/dist"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "site"
+	}
+}

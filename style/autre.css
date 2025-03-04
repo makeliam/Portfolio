@@ -1,0 +1,252 @@
+/* Styles généraux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PP Gatwick', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100vw;
+  background: #222222; /* Couleur de fond globale */
+  position: relative;
+  overflow-x: hidden;
+}
+html {
+scroll-behavior: smooth;
+}
+
+/* Styles pour le header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+  background: #181A1B;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Ombre sous le header */
+  z-index: 6;
+}
+
+/* Logo dans le header */
+.logo {
+ padding-top: 30px;
+ margin-left: 50px;
+ width: 100px;
+}
+
+.langue_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo_container{
+  display: flex;
+  justify-content: center;
+  z-index: 10000;
+  align-items: center;
+  gap: 50px;
+}
+
+.language-link {
+  margin-right: 5px; /* Ajustez la marge selon vos besoins */
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out; /* Transition de couleur au survol */
+}
+
+/* Styles au survol */
+.language-link:hover {
+  color: #4CAF50; /* Couleur verte au survol */
+}
+
+/* Menu de navigation */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin-right: 66px;
+ 
+  
+}
+.langue_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo_container{
+  display: flex;
+  justify-content: center;
+  z-index: 10000;
+  align-items: center;
+  gap: 50px;
+}
+
+.language-link {
+  margin-right: 5px; /* Ajustez la marge selon vos besoins */
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out; /* Transition de couleur au survol */
+}
+
+/* Styles au survol */
+.language-link:hover {
+  color: #4CAF50; /* Couleur verte au survol */
+}
+
+/* Menu de navigation */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-right: 66px;
+   
+    
+}
+
+
+/* Liens dans le menu de navigation */
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  transition: 0.5s;
+  position: relative; /* Nécessaire pour positionner le pseudo-élément */
+  display: inline-block; /* Assure une meilleure gestion de l'espace */
+}
+
+/* Pseudo-élément pour l'effet de soulignement */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px; /* Épaisseur de la barre */
+  background-color: #5DCB5C; /* Couleur de la barre */
+  bottom: -10px; /* Éloignement du mot */
+  left: 0;
+  border-radius: 200px; /* Bords arrondis */
+  transform: scaleX(0); /* Commence sans largeur */
+  transform-origin: bottom right; /* Animation de droite à gauche */
+  transition: transform 0.5s ease-out;
+}
+
+/* Effet de survol */
+.nav-link:hover::after {
+  transform: scaleX(1); /* Pleine largeur lors du survol */
+  transform-origin: bottom left; /* Animation de gauche à droite */
+}
+video {
+  position: absolute;
+  max-width: 100%; /* Pour rendre la vidéo responsive */
+  min-width:500px;
+  border-radius: 8px; /* Pour adoucir les coins */
+  margin-top: 30vh;
+  margin-left: 10vw;
+}
+.txt{
+  color: #fff;
+  font-size: 16px;
+  margin-top: 60vh;
+  padding: 5vw;
+}
+section{
+  width: 100vw;
+  height: 100vh;
+}
+@media (width < 650px) {
+  
+ 
+  #menuBurger {
+    z-index: 10;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.886);
+    color: white;
+    text-align: center;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    animation: slideIn 0.5s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #menuBurger a {
+    z-index: 10;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5em;
+    display: block;
+    margin-bottom: 6vh;
+    margin-top: 6vh;
+    
+
+    
+  }
+
+  #burgerIcon {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 99999;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+  }
+  
+
+  .nav-link{
+    display: none;
+  }
+  
+/*fin menu burger*/
+video {
+  position: absolute;
+ 
+ min-width: 80%;
+  border-radius: 8px; /* Pour adoucir les coins */
+  margin-top: 30vh;
+  margin-left: 10vw;
+
+
+}
+.txt{
+  color: #fff;
+  font-size: 12px;
+  margin-top: 60vh;
+  padding: 5vw;
+}
+}
+
+
+
+
+
+
