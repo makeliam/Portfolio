@@ -591,6 +591,22 @@ input[type="submit"]:hover {
 .next::before {
   display: none; /* Pour cacher le texte par défaut d'ionicons */
 }
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #4db04b;
+  gap: 50px; /* Espace entre les flèches sur grand écran */
+}
+
+/* Style des icônes pour grands écrans */
+.nav ion-icon {
+  font-size: 60px; /* Taille plus grande pour écrans normaux */
+  width: 60px;
+  height: 60px;
+}
+
 @media (width < 650px) {
   .nav-menu{
     display: none;
