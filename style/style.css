@@ -581,14 +581,7 @@ input[type="submit"]:hover {
 .button-style:hover {
   background-color: #218838; /* Couleur de fond plus foncée au survol */
 }
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 100px; /* Ajustez la taille selon vos préférences */
-  color: #4db04b;
-  transform: translateX(28vw);
-}
+
 
 .btn {
   cursor: pointer;
@@ -630,15 +623,22 @@ input[type="submit"]:hover {
     margin-left: 10vw; /* Ajustement du décalage pour les petits écrans */
     font-size: 12px;
 }
-
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 23vw; /* Ajustez la taille selon vos préférences */
-  color: #4db04b;
-  transform: translateX(-26vw);
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #4db04b;
+    margin: 0 auto;
+    gap: 30px; /* Espace entre les flèches */
+  }
+  
+  /* Cibler spécifiquement les icônes */
+  .nav ion-icon {
+    font-size: 40px; /* Taille des icônes */
+    width: 60px;    /* Largeur explicite */
+    height: 60px;   /* Hauteur explicite */
+  }
 section .container{
   position: absolute;
   
@@ -734,7 +734,7 @@ section .container .element{
   position: absolute; /* Positionnement absolu */
   height: 6px; /* Hauteur de la ligne */
   width: 73px; /* Largeur de la ligne */
-  top: 20vh; /* Positionnez juste en dessous du titre */
+  top: 15vh; /* Positionnez juste en dessous du titre */
   left: 50%; /* Démarrez du centre du titre */
   transform: translateX(-50%); /* Décaler à gauche pour centrer sous le titre */
   border-radius: 5px; /* Bords arrondis de la ligne */
@@ -880,11 +880,7 @@ form {
     margin-bottom: 20px;
 }
 
-.section-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-}
+
 
 .ligne {
     width: 60px;
